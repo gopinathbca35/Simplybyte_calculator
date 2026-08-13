@@ -13,13 +13,13 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                bat 'docker build -t calculator:latest .'
+                sh 'docker build -t calculator:latest .'
             }
         }
 
         stage('Docker Tag') {
             steps {
-                bat 'docker tag calculator:latest gopinathbca35/calculator-app:latest'
+                sh 'docker tag calculator:latest gopinathbca35/calculator-app:latest'
             }
         }
 
